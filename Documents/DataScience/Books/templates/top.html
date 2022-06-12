@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block header %}
+
+    <title>Top Ten</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          
+          tr:nth-child(even) {
+            background-color: #dddddd;
+          }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+        <table class="mt-5">
+            <tr>
+              <th>Book Name</th>
+              <th>Book Author</th>
+              <th>Average Rating</th>
+            </tr>
+        {% for row in row_data %}
+            <tr>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{"%.2f"|format(row[4]) }}</td>
+            </tr>
+        {% endfor %}
+        
+        </table>
+          
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block header %}
+
+    <title>About</title>
+
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>About The App</h2>
+    <p class="w-50">
+        This is the website with collections of top readed books.
+        First the data set from kaggle is taken to do analysis.
+        Popularity based System and Collaborative based System is Used.
+        With Popularity based system the top 10 books are retrieved on the 
+        basis of rating.
+    </p>
+    <p class="w-50">
+        Similarly all data set is used to build the Collaborative Recommendation system, 
+        which recommends 5 books on the basis of the given book. 
+        <ul>
+            <li>To see that, you need to click "More Details" on any particular book</li>
+        </ul>
+    </p>
+</div>
+{% endblock content %}

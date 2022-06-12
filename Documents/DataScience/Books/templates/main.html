@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/book.svg') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+        {% block header %}
+        {% endblock %}
+    </head>
+
+<body>
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid d-flex justify-content-start">
+            <a class="navbar-brand" href="{{ url_for('home')}}">
+                <img style="height: 50px; color: #fff" src="{{ url_for('static', filename='img/logo.png') }}" />
+            </a>
+
+            <ul class="navbar-nav w-50 d-flex ml-5">
+                <li class="nav-item my-1 mx-3" id="">
+                    <a href="{{ url_for('home')}}" class="nav-link text-white h5 fw-bold"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item my-1 mx-3" id="">
+                    <a href="{{ url_for('top')}}" class="nav-link text-white h5 "><strong>Top</strong></a>
+                </li>
+                <li class="nav-item my-1 mx-3" id="">
+                    <a href="{{ url_for('about')}}" class="nav-link text-white h5"><strong>About</strong></a>
+                </li>
+            </ul>
+
+            
+            </div>
+        </nav>
+
+        {% block content %}
+
+        {% endblock%}
+
+    
+
+
+    </div>
+        <hr>
+        <section class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                       &copy; Book Recommendation System |<a href="https://kishmatbhattarai.com.np" target="_blank"  > Created by: kishmatbhattarai</a> 
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

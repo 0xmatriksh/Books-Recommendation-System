@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+
+{% block header %}
+
+    <title>{{book[1]}}</title>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class= "mt-5 d-flex align-items-center justify-content-center">
+            <div style="height:400px"  class="w-50 border border-dark p-4">
+                <img class="d-block h-50" src="{{book[5]}}" alt="..."><br>
+                <p class="d-inline">{{ "Average Rating: %.2f/10"|format(book[4])}}</p>&nbsp;<i class="fa-solid fa-star-half-stroke"></i>
+                <h2 class="fw-bold"><strong>{{book[1]}}</strong></h2>
+                <h4><i class="fa-solid fa-user-pen"></i>&nbsp; {{book[2]}} </h4>
+                <h5>Total Number of Ratings : {{book[3]}}</h5>  
+            </div>
+        </div>
+
+        <hr>
+        <h4><strong>Recommendation For You:</strong></h4>
+        <div class="mx-5 d-flex flex-wrap">
+            
+            {% for row in data %}
+            <div class="card my-2 mx-3" style="width: 13rem;">
+              <img style="height: 250px;" src="{{ row[2] }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center" style="min-height: 80px;">{{row[0]}}</h5>
+                <p class="card-text text-center"><i class="fa-solid fa-user-pen"></i>&nbsp;{{row[1]}}</p>
+              </div>
+            </div>
+        
+            {% endfor %}
+          
+        </div>
+
+{% endblock %}
