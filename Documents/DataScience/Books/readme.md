@@ -1,5 +1,5 @@
 <div align ="center">
-  <img src="./static/img/logo.png" width="270"/>
+  <img src="./static/img/logo2.png" width="270"/>
 <br>
 <b>
 <p>Book Recommendation System is the website with collections of top readed books with the functionaliy of recommendation system. It basically recommends the book on the basis of given books. It also shows data of different books available.</p><br>
